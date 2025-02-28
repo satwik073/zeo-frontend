@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Chatbot = () => {
+  
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
@@ -11,7 +12,7 @@ const Chatbot = () => {
     }
 
     try {
-      const response = await fetch("https://chatbot-zeo-backend-gcwj9jq7r-arobix.vercel.app/ask", {
+      const response = await fetch("https://zeo-chatbot-backend.vercel.app/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
